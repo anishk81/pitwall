@@ -30,6 +30,10 @@ class Settings(BaseSettings):
     groq_api_key: SecretStr | None = None
     gemini_api_key: SecretStr | None = None
     ollama_base_url: str = "http://localhost:11434"
+    # Model choices (config, not code: models get retired, as gemini-2.5-flash showed)
+    groq_model: str = "openai/gpt-oss-20b"
+    gemini_model: str = "gemini-3.5-flash-lite"
+    ollama_model: str = "llama3.2:3b"
 
 
 @lru_cache
